@@ -1,5 +1,6 @@
 package ss1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class bai10 {
@@ -12,23 +13,32 @@ public class bai10 {
         return true;
     }
 
-    private static void insert(int a[], int k, int id) {
-        for(int i=id-1; i>=0; i-- ) {
-            //a[id]=
-        }
+    private static void swap(int a[], int k, int id) {
+        if(id == 0) return;
+        for(int i=id; i>0; i-- )
+            a[i]=a[i-1];
+        a[0]=k;
+
 
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Nhập n: ");
         int n = sc.nextInt();
-        int []a = new int[n+1];
+        int []a = new int[n];
         for(int i=0; i<n; i++) {
             System.out.printf("a[%d]=", i);
             a[i] = sc.nextInt();
         }
+        int count=0;
+        for(int i=0; i<n; i++) {
+            if(check_prime(a[i])){
+                count++;
+                swap(a,a[i],i);
+            }
+        }
+        Arrays.sort(a,0,count);
 
-
-
+        System.out.printf("mảng sau khi đưa số nguyên tố lên đầu là: %s", Arrays.toString(a));
     }
 }
