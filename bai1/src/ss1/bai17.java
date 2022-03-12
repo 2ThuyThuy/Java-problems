@@ -10,17 +10,28 @@ public class bai17 {
         return false;
     }
 
-    private static void Words(String s){
-
+    private static void Words(StringBuilder s){
+        int diff ='A'-'a';
+        if(check(s.charAt(0))){
+            int cx = s.charAt(0)+diff;
+            s.setCharAt(0,(char) cx);
+        }
+        for(int i=1; i<s.length()-1; i++) {
+            if (s.charAt(i)==' ' && check(s.charAt(i+1))) {
+                int cx = s.charAt(i+1)+diff;
+                s.setCharAt(i+1,(char) cx);
+            }
+        }
+        System.out.println(s);
 
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Nhập chuỗi: ");
-        char []ch = new char[10000];
         String ss = sc.nextLine();
-        Words(ss);
+        StringBuilder str = new StringBuilder(ss);
+        Words(str);
     }
 
 }
