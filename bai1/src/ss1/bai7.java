@@ -22,15 +22,15 @@ public class bai7 {
         int k = sc.nextInt();
 
         int l=0,r=n-1;
-        while (l<r) {
+        while (l<=r) {
             int m = (l+r)/2;
             if(a[m] == k) {
                 System.out.println(k + " ở vị trí thứ " + m);
                 return;
             } else if(a[m] <= k )
-                r=m-1;
-            else
                 l=m+1;
+            else
+                r=m-1;
 
         }
         System.out.println("Không tìm thấy "+k);
