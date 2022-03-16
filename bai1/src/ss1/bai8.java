@@ -15,7 +15,7 @@ public class bai8 {
         }
         System.out.printf("Nhập phần tử muốn muốn chèn: ");
         int k = sc.nextInt();
-        if(k >=n) {
+        if(k >=a[n-1]) {
             a[n]=k;
             n++;
         }else {

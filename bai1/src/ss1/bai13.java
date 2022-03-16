@@ -30,5 +30,4 @@ public class bai13 {
         return array[internalIndex];
     }
 
-
 }
