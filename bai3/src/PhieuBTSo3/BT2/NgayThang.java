@@ -13,7 +13,7 @@ public class NgayThang {
         ngay = sc.nextInt();
         System.out.print("Thang: ");
         thang = sc.nextInt();
-        System.out.println("Nam: ");
+        System.out.print("Nam: ");
         nam = sc.nextInt();
     }
     public String toString(){
