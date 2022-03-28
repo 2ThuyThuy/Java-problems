@@ -1,6 +1,6 @@
 package PhieuBTSo3.BT1;
 
-public class main {
+public class RunMain {
 
     public static void main(String[] args) {
         HinhTron htron = new HinhTron();

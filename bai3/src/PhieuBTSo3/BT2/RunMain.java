@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class main {
+public class RunMain {
     static List<KhachHangNuocNgoai> dsKHNuocNgoai = new ArrayList<>();
     static List<KhachHangVietNam> dsKHVietNam = new ArrayList<>();
     static int soKHVietNam;
     static int soKHNuocNgoai;
 
-    public  static void TinhTongSL(){
+    public static void TinhTongSL(){
         double tongSL=0;
         for(KhachHangVietNam khVietNam : dsKHVietNam)
             tongSL += khVietNam.soLD;
@@ -72,11 +72,13 @@ public class main {
 
         System.out.println("Danh sách khách hàng");
         KhachHangVietNam.InTT();
-        for(KhachHangVietNam khVietNam : dsKHVietNam)
-            khVietNam.xuat();
+        dsKHVietNam.forEach(KhachHangVietNam::xuat);
+//        for(KhachHangVietNam khVietNam : dsKHVietNam)
+//            khVietNam.xuat();
         KhachHangNuocNgoai.InTT();
-        for(KhachHangNuocNgoai khNuocNgoai: dsKHNuocNgoai)
-            khNuocNgoai.xuat();
+        dsKHNuocNgoai.forEach(KhachHangNuocNgoai::xuat);
+//        for(KhachHangNuocNgoai khNuocNgoai: dsKHNuocNgoai)
+//            khNuocNgoai.xuat();
 
         TinhTongSL();
         TBkhNuocNgoai();
