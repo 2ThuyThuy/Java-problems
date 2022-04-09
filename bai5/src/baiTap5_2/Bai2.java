@@ -4,7 +4,8 @@ import java.io.FileInputStream;
 
 
 public class Bai2 {
-    public static void main(String[] args) {
+
+    public static void bai2_1() {
         try {
             FileInputStream fin = new FileInputStream("D:\\testout.txt");
             int i = fin.read(); // đọc số đầu tiên
@@ -13,5 +14,9 @@ public class Bai2 {
         }catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
