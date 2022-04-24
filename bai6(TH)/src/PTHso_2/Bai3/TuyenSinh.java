@@ -34,8 +34,8 @@ public class TuyenSinh {
     }
 
     static boolean ssxau(String s1, String s2) {
-        if (s1.equalsIgnoreCase(s2)) return false;
-        else return true;
+        if (s1.equalsIgnoreCase(s2))
+            else return true;
     }
 
     static int nhaplc() throws IOException {
